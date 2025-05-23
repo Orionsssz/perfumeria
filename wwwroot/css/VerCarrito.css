@@ -1,0 +1,378 @@
+﻿
+.banner-carrito {
+    display: block;
+    padding: 30px 0px;
+    margin: 20px auto;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 2000px;
+    width: 100%; /* Esto asegura que ocupe el 100% del ancho disponible */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    background-image: url('../imagenes/Banner3.png');
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+}
+    .banner-carrito h2 {
+        font-size: 28px;
+        font-weight: bold;
+    }
+/* Contenedor principal de contenido */
+.main {
+    display: flex;
+    padding: 40px;
+    gap: 30px;
+    justify-content: center;
+}
+
+.cart-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: black;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cart-product {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #447F98; /* Línea de separación más visible */
+    padding: 15px 20px;
+    border-radius: 15px; /* Redondear el contenedor del producto */
+    margin-bottom: 15px;
+    background-color: white;
+    flex: 2;
+    min-width: 300px;
+}
+/* Ajuste del checkbox */
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+    transform: scale(1.2); /* Aumentar tamaño del checkbox */
+    accent-color: #000;
+}
+/* Estilo de la imagen del producto */
+.product-img-container {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-details {
+    flex: 1.5;
+}
+
+    .product-details h3 {
+        margin: 0;
+        font-size: 18px;
+        color: #111;
+    }
+
+    .product-details p {
+        margin: 5px 0 0;
+        color: #666;
+        font-size: 14px;
+    }
+
+/* Estilo de la cantidad */
+.product-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    justify-content: center;
+}
+
+    .product-quantity label {
+        font-size: 14px;
+        color: #333;
+    }
+
+
+.qty-btn {
+    padding: 6px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+    border-radius: 6px;
+}
+
+.qty-value {
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 16px;
+    flex: 0.5;
+    text-align: center;
+}
+
+.delete-btn {
+    color: black;
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+    .delete-btn i {
+        pointer-events: none; /* Para que el clic se aplique al botón, no al ícono */
+    }
+
+/* Formato de la línea divisoria */
+.cart-product .product-details {
+    border-top:2px solid #ddd;
+    padding-top: 10px;
+}
+
+/* Hacer que el contenido se adapte en pantallas pequeñas */
+@media (max-width: 768px) {
+    .cart-product, .right-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cart-product {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-details,
+    .product-price {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .product-quantity {
+        justify-content: center;
+    }
+
+    .cart-container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+/*  fin*/
+
+
+
+/* Sección derecha del resumen y formularios */
+.right-section {
+    flex: 1;
+    background-color: #008885;
+    padding: 20px;
+    border-radius: 12px;
+    color: #fff;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'DM Sans', sans-serif;
+    max-height: 500px;
+    overflow-y: auto;
+    max-width: 600px;
+    margin: 0 auto;
+    min-width: 280px;
+}
+
+    /* Título centrado para cada subsección */
+    .right-section h2 {
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+    }
+
+.boton-agregar-wrapper {
+    margin-bottom: 16px;
+}
+
+.btn-agregar-direccion {
+    background-color: #88c9b3;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+    .btn-agregar-direccion:hover {
+        background-color: #66aa98;
+        transform: scale(1.03);
+    }
+
+.icono-mas {
+    color: white;
+    font-size: 18px;
+}
+
+.lista-direcciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.direccion-radio {
+    margin-bottom: 10px;
+    background-color: black;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #88c9b3;
+    gap: 5px;
+}
+
+.radio-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px; /* Puedes usar 0 si quieres que esté completamente pegado */
+    margin: 0;
+    color: white;
+}
+
+    .radio-label input[type="radio"] {
+        transform: scale(1.2);
+    }
+
+.direccion-texto {
+    font-size: 15px;
+}
+
+
+/* Secciones ocultas por defecto */
+.section {
+    display: none;
+}
+
+    /* Sección activa visible */
+    .section.active {
+        display: block;
+    }
+
+.opcion-envio {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px; /* Puedes usar 0 si quieres que esté completamente pegado */
+    margin: 0;
+    font-size: 15px;
+    color: white;
+}
+
+
+/* Grupo de campos en formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Estilo para etiquetas de formularios */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Estilo base para inputs y selects */
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #21312f;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.placeholder{
+    color:white;
+}
+/* Botones de navegación y envío */
+.next-button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+}
+
+    /* Efecto hover para botones */
+    .next-button:hover {
+        background-color: #0B4442;
+    }
+
+/* Contenedor de botones de navegación entre secciones */
+.section-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+/* Mensaje de éxito al final del proceso */
+.success-message {
+    text-align: center;
+    font-size: 18px;
+    color: #FF5C5C;
+    margin-top: 20px;
+}
+
+/* Imágenes de opciones de pago */
+.payment-option img {
+    width: 100px;
+    margin: 10px 0;
+}
+
+/* Estilo para contenedor de opción de pago */
+.payment-option {
+    margin-bottom: 15px;
+    background-color: #052423;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+
+/* Botón con flecha para retroceder */
+.back-arrow-button {
+    background-color: black !important;
+}
+
+    .back-arrow-button:hover {
+        background-color: #e04c4c !important;
+    }
+
+/* Clase utilitaria para flex horizontal centrado */
+.flex-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+

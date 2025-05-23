@@ -1,0 +1,189 @@
+﻿
+/*Categoria banner*/
+.categoria-banner {
+    display: block;
+    padding: 30px 20px;
+    margin: 20px auto;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 2000px;
+    width: 100%; /* Esto asegura que ocupe el 100% del ancho disponible */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    background-image: url('../imagenes/Banner3.png'); /* Aquí agregas la ruta de tu imagen */
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+}
+
+    .categoria-banner h2 {
+        font-size: 28px;
+        font-weight: bold;
+    }
+/*Filtro de busqueda*/
+
+.filtros-productos-contenedor {
+    display: flex; /* Flexbox para poner filtros y productos en fila */
+    justify-content: flex-start; /* Alineación a la izquierda */
+    gap: 20px; /* Espacio entre filtros y productos */
+    margin-left: 0;
+    width: 60%; /* Aseguramos que el contenedor no esté demasiado ancho */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+.filtros {
+    width: 25%; /* Filtros ocupan 25% del espacio */
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    flex-shrink: 0; /* Evita que se reduzca el tamaño del filtro */
+    color: white;
+}
+
+.filtro-grupo {
+    margin-bottom: 20px;
+}
+
+    .filtro-grupo h4 {
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+
+/*Productos*/
+.productos-area {
+    width: 70%; /* Los productos ocupan el 70% del espacio */
+    display: flex;
+    flex-wrap: wrap; /* Asegura que los productos se ajusten a pantallas pequeñas */
+    gap: 1.5rem; /* Espaciado entre productos */
+}
+
+.productos-contenedor {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    padding: 1rem;
+    width: 100%; /* Los productos ocupan el 70% del espacio */
+}
+
+.producto-card {
+    width: 200px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .producto-card[style="display: none;"] {
+        opacity: 0;
+    }
+
+    .producto-card[style="display: block;"] {
+        opacity: 1;
+    }
+
+    .producto-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Sombra más fuerte al pasar el ratón */
+    }
+
+.producto-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.producto-info {
+    padding: 1rem;
+}
+
+.producto-nombre {
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+.producto-descripcion {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.producto-precio {
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+.btn-agregar {
+    background-color: #008885;
+    color: #fff;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+    .btn-agregar:hover {
+        background-color: #5a4bcf;
+    }
+
+.sin-productos {
+    text-align: center;
+    padding: 3rem;
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .productos-contenedor {
+        grid-template-columns: repeat(2, 1fr); /* 2 productos por fila en pantallas pequeñas */
+    }
+
+    .filtros-productos-contenedor {
+        flex-direction: column; /* En pantallas pequeñas, los filtros y productos se apilan verticalmente */
+    }
+}
+
+@media (max-width: 480px) {
+    .productos-contenedor {
+        grid-template-columns: 1fr; /* 1 producto por fila en pantallas muy pequeñas */
+    }
+}
+
+/* Estilo para los checkboxes */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4CAF50; /* Color de borde */
+    background-color: #fff; /* Color de fondo */
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Estilo para los labels */
+label {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        bottom: 0px;
+    }
+
+    to {
+        opacity: 1;
+        bottom: 30px;
+    }
+}

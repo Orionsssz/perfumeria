@@ -1,0 +1,337 @@
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #333;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 10%;
+    background: linear-gradient(1deg,rgba(84, 115, 78, 1) 8%, rgba(45, 92, 37, 1) 36%, rgba(17, 61, 49, 1) 77%);
+}
+
+.hero-video {
+    flex: 1;
+    max-width: 50%;
+}
+
+    .hero-video video {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+
+/* Texto del hero */
+.hero-text h1 {
+    font-size: 3rem; /* Tamaño grande para encabezado */
+    margin-bottom: 20px; /* Espacio bajo el título */
+    color: white;
+}
+
+/* Botón del hero */
+.hero-btn {
+    background: #07523B; /* Color de fondo */
+    padding: 12px 25px; /* Tamaño del botón */
+    border: none; /* Sin borde */
+    color: #fff; /* Texto blanco */
+    border-radius: 30px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Imagen del hero */
+.hero-image img {
+    max-width: 100%; /* Imagen adaptable */
+    height: auto; /* Altura proporcional */
+}
+
+.featured .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.featured .product {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-info p {
+    margin: 0.3rem 0;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.product {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+    .product img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+.product-info p {
+    margin: 0.3rem 0;
+}
+
+.btn-agregar {
+    background-color: #765E49;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-agregar:hover {
+        background-color: #5e4939;
+    }
+
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #333;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: toast-in 0.4s forwards;
+}
+
+@keyframes toast-in {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.sale {
+    background: linear-gradient(180deg,rgba(106, 128, 96, 1) 0%, rgba(39, 92, 39, 1) 74%, rgba(20, 77, 20, 1) 84%);
+    /*linear-gradient(180deg,rgba(106, 128, 96, 1) 0%, rgba(189, 104, 105, 1) 76%, rgba(153, 78, 78, 1) 100%);*/
+    /*linear-gradient(180deg,rgba(84, 115, 78, 1) 0%, rgba(189, 104, 105, 1) 81%, rgba(153, 78, 78, 1) 98%);*/
+    /* Fondo suave como en la imagen de ejemplo */
+    padding: 50px 20%;
+}
+
+.sale-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.sale-text {
+    flex: 1;
+    text-align: left;
+}
+
+    .sale-text h2 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .sale-text p {
+        font-size: 1rem;
+        margin: 10px 0;
+        color: white;
+    }
+
+.shop-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #d98989;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.sale-image {
+    flex: 1;
+    text-align: right;
+}
+
+    .sale-image img {
+        max-width: 75%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 10%;
+}
+
+.feature-box {
+    width: 250px;
+    text-align: center;
+}
+
+    .feature-box img {
+        width: 75%;
+        border-radius: 10px;
+    }
+
+.site-footer {
+    background-color: #5F735F;
+    padding: 10px 10%;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-box {
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+    margin: 10px;
+}
+
+.footer-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.black-icon {
+    background-color: black;
+    padding: 8px;
+}
+
+.blue-icon {
+    background-color: #33c4e7;
+    padding: 8px;
+}
+
+.footer-box p {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.footer-box strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap: 15px; /* Espacio entre íconos */
+    flex-direction: row; /* 👈 Asegura que estén en fila, no en columna */
+    padding: 30px 0;
+}
+
+    .social-icons a {
+        font-size: 24px;
+        justify-content: center;
+        display: flex; /* usar flex para centrar ícono dentro */
+        width: 48px;
+        height: 48px;
+        align-items: center;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #000;
+        transition: transform 0.3s ease, background-color 0.3s;
+        color: #fff; /* color por defecto */
+    }
+
+    /* Colores individuales al pasar el mouse */
+    .social-icons a.facebook:hover {
+        background-color: #3b5998;
+        color: #fff;
+    }
+
+    .social-icons a.instagram:hover {
+        background: radial-gradient(circle at 30% 30%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        color: #fff;
+    }
+
+    .social-icons a.pinterest:hover {
+        background-color: #bd081c;
+        color: #fff;
+    }
+
+    .social-icons a.youtube:hover {
+        background-color: #ff0000;
+        color: #fff;
+    }
+
+    .social-icons a:hover {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+
+
+/* Modal general */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Contenido del modal */
+.modal-contenido {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    max-width: 400px;
+    width: 90%;
+}

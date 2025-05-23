@@ -1,0 +1,23 @@
+﻿.ticket-container {
+    background-color: #fdfdfd;
+    border: 2px dashed #88c9b3;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.ticket-info p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.ticket-gracias {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #4caf50;
+}

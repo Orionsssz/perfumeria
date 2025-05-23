@@ -1,0 +1,305 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+/* Importa la fuente 'Poppins' desde Google Fonts con varios pesos */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom right, #c3bf74, #a7d3c6);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 10;
+    animation: fadeIn 1s ease forwards;
+    background: #ffffffc9;
+}
+
+.image-side {
+    width: 50%;
+    background-image: url('../imagenes/login.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.input-field {
+    max-width: 380px; /* Máximo ancho de 380px */
+    width: 100%; /* Ocupa todo el ancho disponible dentro de ese límite */
+    display: grid; /* Usa grid para ubicar íconos y campo */
+    grid-template-columns: 15% 85%; /* Primera definición: ícono y campo (se sobreescribe) */
+    padding: 0 0.4rem; /* Relleno horizontal interno */
+    position: relative; /* Posicionamiento relativo (para ubicar íconos, etc.) */
+    grid-template-columns: 15% 75% 5%; /* Segunda definición que sobreescribe la anterior: ícono izquierdo, campo, ícono mostrar */
+    align-items: center; /* Centra verticalmente los elementos en el grid */
+
+}
+
+    /* Estilo para los campos de entrada que ocupan toda la fila */
+    .input-field.full-width {
+        max-width: none; /* Elimina la restricción de ancho máximo */
+    }
+
+    /* Íconos dentro del input */
+    .input-field i {
+        text-align: center; /* Centra el ícono horizontalmente */
+        line-height: 80px; /* Altura de línea para centrar verticalmente el ícono */
+        color: #acacac; /* Color gris claro para el ícono */
+        transition: 0.5s; /* Transición suave para cambios (como al enfocar) */
+        font-size: 1.1rem; /* Tamaño del ícono */
+    }
+
+    /* Estilos para los campos input */
+    .input-field input {
+        padding: 14px;
+        margin: 12px 0;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        transition: border-color 0.3s;
+        outline: none;
+        font-size: 16px;
+        width: 100%;
+    }
+        .input-field input:focus {
+            border-color: #88c9b3;
+        }
+
+    /* Estilo normal del ícono */
+    .input-field .icon-input {
+        color: #999;
+        transition: color 0.3s ease;
+    }
+
+    /* Cambia el color del ícono izquierdo al hacer focus */
+    .input-field:focus-within .icon-input {
+        color: #88c9b3;
+    }
+
+    /* Cambia el color del ícono del ojito al hacer focus */
+    .input-field:focus-within .togglePassword {
+        color: #88c9b3;
+    }
+
+
+.form-side {
+    width: 50%;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+}
+
+
+    .login-box h2 {
+        margin-bottom: 25px;
+        color: #333;
+        font-size: 28px;
+        text-align: center; 
+        width: 100%;
+    }
+
+    .login-box p {
+        margin-top: 15px;
+        font-size: 14px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .login-box a {
+        color: #88c9b3;
+        text-decoration: none;
+        text-align: center; 
+        width: 100%;
+    }
+
+/* Ícono de mostrar/ocultar contraseña */
+.togglePassword {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #999;
+    font-size: 16px;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Botón de inicio de sesión */
+.btn.solid {
+    padding: 14px;
+    background: #88c9b3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    .btn.solid:hover {
+        background: #66aa98;
+    }
+
+/* Mensaje de error */
+.text-danger {
+    color: #d9534f;
+    font-size: 14px;
+}
+
+.error-text {
+    margin: 0;
+}
+
+/* Animación inicial */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Burbujas decorativas (si decides usarlas) */
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgb(245 255 217 / 90%), rgb(202 233 240) 60%, rgb(54 35 205));
+    box-shadow: inset -5px -5px 10px rgb(255 255 255 / 93%), inset 5px 5px 15px rgb(0 0 0 / 28%), 0 4px 8px rgb(255 255 255 / 71%);
+    animation: floatBubble 10s infinite ease-in-out;
+}
+
+    .bubble:nth-child(1) {
+        width: 100px;
+        height: 100px;
+        left: 10%;
+        top: 60%;
+        animation-delay: 0s;
+    }
+
+    .bubble:nth-child(2) {
+        width: 80px;
+        height: 80px;
+        left: 20%;
+        top: 80%;
+        animation-delay: 2s;
+    }
+
+    .bubble:nth-child(3) {
+        width: 120px;
+        height: 120px;
+        left: 80%;
+        top: 70%;
+        animation-delay: 4s;
+    }
+
+    .bubble:nth-child(4) {
+        width: 60px;
+        height: 60px;
+        left: 50%;
+        top: 90%;
+        animation-delay: 1s;
+    }
+
+    .bubble:nth-child(5) {
+        width: 90px;
+        height: 90px;
+        left: 70%;
+        top: 85%;
+        animation-delay: 3s;
+    }
+
+@keyframes floatBubble {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(-50px) scale(1.05);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .image-side {
+        width: 100%;
+        height: 200px;
+        background-position: top center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .form-side {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .login-box h2 {
+        font-size: 22px;
+    }
+
+    .input-field {
+        grid-template-columns: 10% 85% 5%;
+        margin-bottom: 10px;
+    }
+
+        .input-field input {
+            font-size: 14px;
+            padding: 12px;
+        }
+
+    .btn.solid {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .login-box p {
+        font-size: 12px;
+    }
+
+    .togglePassword {
+        font-size: 14px;
+        right: 8px;
+    }
+
+    .icon-input {
+        font-size: 14px;
+    }
+}

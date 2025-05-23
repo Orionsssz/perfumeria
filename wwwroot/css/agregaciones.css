@@ -1,0 +1,150 @@
+﻿html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #1b5e20, #000);
+    z-index: -1;
+}
+
+.content-wrapper {
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #dcedc8;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid #aed581;
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos generales */
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0b3221;
+}
+
+.card {
+    background-color: #dcedc8;
+    border-radius: 12px;
+    padding: 30px 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border: 1px solid #aed581;
+    transition: transform 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-3px);
+    }
+
+    .card h2 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        color: #0b3221;
+    }
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #eee;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+    .input-group i {
+        margin-right: 10px;
+        color: #217033;
+    }
+
+    .input-group input[type="text"],
+    .input-group input[type="file"],
+    .input-group input[type="number"] {
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .input-group input::file-selector-button {
+        background: #217033;
+        color: #fff;
+        border: none;
+        padding: 6px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+.input-pair {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+    .input-pair .input-group {
+        flex: 1;
+        min-width: 240px;
+    }
+
+.btn {
+    background-color: #6d4c41;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 10px;
+}
+
+    .btn:hover {
+        background-color: #5a3d33;
+        transform: scale(1.05);
+    }
+
+    .btn.back {
+        background-color: #217033;
+    }
+
+        .btn.back:hover {
+            background-color: #195427;
+        }
+
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-left: 5px solid #28a745;
+    padding: 12px 20px;
+    margin: 15px auto;
+    width: 90%;
+    border-radius: 8px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.back-button {
+    margin-top: 25px;
+    text-align: center;
+}
